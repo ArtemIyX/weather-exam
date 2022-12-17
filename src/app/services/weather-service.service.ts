@@ -1,9 +1,44 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
+import {
+  currentWeatherResponse,
+  forecastWeatherResponse,
+} from '../responses/currentWeather';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class WeatherServiceService {
+export class WeatherService {
+  private apiKey: string = '54afe920b17945da9d5210848221712';
+  private apiUrl: string = 'http://api.weatherapi.com/v1/';
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  getCurrentWeather(city: string) : Observable<currentWeatherResponse> {
+    let query = {
+      key: this.apiKey,
+      q: city,
+      aqi: 'no',
+    };
+    return this.http.get<currentWeatherResponse>(
+      this.apiUrl + 'current.json?'
+      + new URLSearchParams(query).toString()
+    );
+  }
+
+  getForecastWeather(city: string, amount: number) : Observable<forecastWeatherResponse> {
+    let query = {
+      key: this.apiKey,
+      q: city,
+      days: amount.toString(),
+      aqi: "no",
+      alerts: "no"
+    };
+    return this.http.get<forecastWeatherResponse>(
+      this.apiUrl +
+        'forecast.json?' +
+        new URLSearchParams(query).toString()
+    );
+  }
 }
