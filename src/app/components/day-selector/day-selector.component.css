@@ -1,0 +1,7 @@
+.day-selector-container {
+  display: flex;
+}
+.day {
+  background-color:bisque;
+  /* background-color: color(green); */
+}

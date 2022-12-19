@@ -1,1 +1,7 @@
-<p>day-selector works!</p>
+<div class="day-selector-container">
+  <div class="day" *ngFor="let item of forecastDays">
+    <p>{{item.date | dayConverter}}</p>
+    <p>{{item.date | dayNumberConverter}}</p>
+    <p>{{item.date | monthConverter}}</p>
+  </div>
+</div>

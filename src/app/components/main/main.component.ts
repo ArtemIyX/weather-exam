@@ -11,7 +11,6 @@ import { DayManipulatorService } from 'src/app/services/day-manipulator/day-mani
 export class MainComponent implements OnInit {
 
   isLoaded: boolean = false;
-  forecastWeatherResponse: forecastWeatherResponse | undefined;
 
   constructor(private mainService: DayManipulatorService) {}
 
@@ -21,12 +20,15 @@ export class MainComponent implements OnInit {
   }
 
   forecastLoaded(forecast: forecastWeatherResponse): void {
-    this.forecastWeatherResponse = forecast;
     this.isLoaded = true;
     console.log("forecastLoaded()");
   }
 
-  isReady(){
+  getForecastResponse(): forecastWeatherResponse {
+    return this.mainService.forecast!;
+  }
+
+  isReady(): boolean{
     return this.isLoaded;
   }
 }

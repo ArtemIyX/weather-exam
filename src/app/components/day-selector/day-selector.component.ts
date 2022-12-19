@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Forecastday } from 'src/app/responses/weather';
+import { DayManipulatorService } from 'src/app/services/day-manipulator/day-manipulator.service';
 
 @Component({
   selector: 'app-day-selector',
@@ -8,6 +9,9 @@ import { Forecastday } from 'src/app/responses/weather';
 })
 export class DaySelectorComponent {
 
+  @Input() forecastDays: Forecastday[] | undefined;
 
-  constructor() {}
+  constructor(private mainService: DayManipulatorService) {
+
+  }
 }

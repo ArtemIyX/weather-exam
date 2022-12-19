@@ -1,8 +1,5 @@
 <p>main works!</p>
 <div *ngIf="isReady()">
-  <p>ready</p>
-  <div *ngFor="let item of forecastWeatherResponse?.forecast?.forecastday">
-    <p>{{item.date}}</p>
-  </div>
+  <app-day-selector [forecastDays]="getForecastResponse().forecast.forecastday"></app-day-selector>
 </div>
 
