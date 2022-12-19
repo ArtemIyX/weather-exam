@@ -1,2 +1,8 @@
 <p>main works!</p>
-<p>{{forecast | json}}</p>
+<div *ngIf="isReady()">
+  <p>ready</p>
+  <div *ngFor="let item of forecastWeatherResponse?.forecast?.forecastday">
+    <p>{{item.date}}</p>
+  </div>
+</div>
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { forecastWeatherResponse } from 'src/app/responses/weather';
-import { WeatherService } from 'src/app/services/weather/weather-service.service';
+import { DayManipulatorService } from 'src/app/services/day-manipulator/day-manipulator.service';
 
 @Component({
   selector: 'app-main',
@@ -9,11 +10,23 @@ import { WeatherService } from 'src/app/services/weather/weather-service.service
 })
 export class MainComponent implements OnInit {
 
-  forecast?: forecastWeatherResponse;
+  isLoaded: boolean = false;
+  forecastWeatherResponse: forecastWeatherResponse | undefined;
 
-  constructor(private weatherService: WeatherService) {}
+  constructor(private mainService: DayManipulatorService) {}
 
   ngOnInit(): void {
-    this.weatherService.getForecastWeather("Riga", 7).subscribe(x => this.forecast = x);
+    this.mainService.onForecastLoaded.subscribe(this.forecastLoaded.bind(this));
+    this.mainService.loadForecast();
+  }
+
+  forecastLoaded(forecast: forecastWeatherResponse): void {
+    this.forecastWeatherResponse = forecast;
+    this.isLoaded = true;
+    console.log("forecastLoaded()");
+  }
+
+  isReady(){
+    return this.isLoaded;
   }
 }

@@ -7,6 +7,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { WeathercardComponent } from './components/weathercard/weathercard.component';
 import { MainComponent } from './components/main/main.component';
+import { DaySelectorComponent } from './components/day-selector/day-selector.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -14,7 +15,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, NotFoundComponent, WeathercardComponent],
+  declarations: [AppComponent, MainComponent, NotFoundComponent, WeathercardComponent, DaySelectorComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
