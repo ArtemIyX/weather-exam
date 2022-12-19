@@ -12,6 +12,7 @@
 :root {
   --back: #f3efe0;
   --light: #434242;
+  --mid:rgb(51, 51, 51);
   --dark: #222222;
   --selected: #22a39f;
   --text: #d3d3d3;

@@ -50,4 +50,9 @@ export class WeathercardComponent implements OnInit {
       }
     });
   }
+
+  isDelim(item: WeatherData): boolean {
+    return ((this.weatherData.indexOf(item)+1) % 2 == 0);
+  }
+
 }

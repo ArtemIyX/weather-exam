@@ -1,6 +1,7 @@
 .weathercard{
-  margin: 0px;
-  padding: 0.5rem;
+  /* margin: 0px; */
+  /* padding: 0.5rem; */
+  padding-bottom: 3em;
   background-color: var(--light);
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -9,6 +10,8 @@ p {
   color: var(--text);
 }
 .temp-header {
+  padding-right: 0.6em;
+  padding-left: 2em;
   text-align: right;
 }
 .temp-header  p {
@@ -16,4 +19,57 @@ p {
 }
 .value P {
   font-family: 'Chivo Mono', monospace;
+}
+table {
+  color: var(--text);
+}
+thead {
+  border-bottom: 1px solid var(--selected);
+}
+tbody {
+  border-top: 1px solid var(--selected);
+  border-bottom: 3px solid var(--dark);
+}
+td{
+  padding: 5px;
+}
+tbody > tr > th,
+thead > tr > th {
+  background-color: var(--dark);
+}
+
+thead > tr > th {
+  padding: 0.2em;
+  text-align: center;
+}
+thead > tr > th:first-child {
+  text-align: right;
+}
+tbody > tr > th {
+  border-right: 1px solid var(--selected);
+}
+.delim {
+  border-right: 1px solid var(--selected);
+}
+tbody > tr > td{
+  padding: 0.25em;
+  text-align: center;
+  font-family: 'Chivo Mono', monospace;
+  font-weight: 100;
+}
+tbody > tr:nth-of-type(even) {
+  background-color: var(--mid);
+}
+.rise {
+  padding: 0.5em;
+  display: flex;
+}
+.rise > div {
+  background-color: var(--mid);
+  padding: 0.65em;
+  border: 1px solid var(--selected);
+}
+.rise > div > p {
+  padding: 0em;
+  margin: 0em;
 }

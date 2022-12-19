@@ -7,11 +7,11 @@
   border-top-right-radius: 1rem;
   padding: 1rem;
   background-color: var(--dark);
-
 }
 .selected {
   background-color: var(--light);
 }
+
 .day-button {
   border: none;
   background-color: transparent;
