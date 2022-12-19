@@ -6,21 +6,34 @@
   </p>
   </div>
   <div class="row">
-    <div class="col temp-header">
+    <div class="col-5 temp-header">
+      <p>Time</p>
       <p>Temperature, °C</p>
+      <p>Humidity</p>
       <p>Pressure, mb</p>
       <p>Wind, kph</p>
       <p>Wind direction</p>
-      <p>Chance of rain</p>
+      <p>Chance of rain, %</p>
+      <p>Chance of snow, %</p>
       <div>
         <p>Condition text</p>
         <img src="http://cdn.weatherapi.com/weather/64x64/day/119.png">
       </div>
     </div>
-    <div class="col value">
-      <p>hello</p>
-      <p>bitch</p>
+    <div class="col" *ngFor="let item of weatherData">
+      <div class="col value">
+        <p>{{item.time}}</p>
+        <p>{{item.temp_c}}</p>
+        <p>{{item.humidity}}</p>
+        <p>{{item.pressure_mb}}</p>
+        <p>{{item.wind_mph}}</p>
+        <p>{{item.wind_dir}}</p>
+        <p>{{item.chance_of_rain}}</p>
+        <p>{{item.chance_of_snow}}</p>
+      </div>
+
     </div>
+
   </div>
 
 </div>

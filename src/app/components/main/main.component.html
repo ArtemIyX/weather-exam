@@ -2,7 +2,7 @@
 <div class="main-conainter">
   <div *ngIf="isReady()">
     <app-day-selector [forecastDays]="getForecastResponse().forecast.forecastday"></app-day-selector>
-    <app-weathercard></app-weathercard>
+    <app-weathercard [forecastDay]="getSelectedForecastDay()"></app-weathercard>
   </div>
 </div>
 

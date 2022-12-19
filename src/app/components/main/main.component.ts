@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { forecastWeatherResponse } from 'src/app/responses/weather';
+import { Forecast, Forecastday, forecastWeatherResponse } from 'src/app/responses/weather';
 import { DayManipulatorService } from 'src/app/services/day-manipulator/day-manipulator.service';
 
 @Component({
@@ -26,6 +26,10 @@ export class MainComponent implements OnInit {
 
   getForecastResponse(): forecastWeatherResponse {
     return this.mainService.forecast!;
+  }
+
+  getSelectedForecastDay(): Forecastday {
+    return this.mainService.forecast!.forecast.forecastday[this.mainService.selectedDay];
   }
 
   isReady(): boolean{
