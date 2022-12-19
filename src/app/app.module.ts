@@ -4,9 +4,9 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Routes, RouterModule } from '@angular/router';
-
-import { MainComponent } from './components/main/main.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { WeathercardComponent } from './components/weathercard/weathercard.component';
+import { MainComponent } from './components/main/main.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -14,7 +14,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, NotFoundComponent],
+  declarations: [AppComponent, MainComponent, NotFoundComponent, WeathercardComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
