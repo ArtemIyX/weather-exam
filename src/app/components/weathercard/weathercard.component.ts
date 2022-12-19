@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Condition, Forecastday } from 'src/app/responses/weather';
+import { Condition, Forecastday, Location } from 'src/app/responses/weather';
 
 export interface WeatherData {
   time: string;
@@ -21,15 +21,14 @@ export interface WeatherData {
 export class WeathercardComponent implements OnInit {
 
   @Input() forecastDay: Forecastday | undefined;
-
+  @Input() location: Location | undefined;
   weatherData: WeatherData[] = [];
   private hours: number[] = [
     2, 5, 8, 11, 14, 17, 20, 23
   ]
 
-  constructor() {
+  constructor() {}
 
-  }
   ngOnInit(): void {
     this.forecastDay!.hour.forEach(x => {
       const date: Date = new Date(x.time);

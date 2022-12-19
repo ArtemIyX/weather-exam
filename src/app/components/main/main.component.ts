@@ -28,6 +28,7 @@ export class MainComponent implements OnInit {
     return this.mainService.forecast!;
   }
 
+
   getSelectedForecastDay(): Forecastday {
     return this.mainService.forecast!.forecast.forecastday[this.mainService.selectedDay];
   }
