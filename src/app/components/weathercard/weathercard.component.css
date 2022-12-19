@@ -1,0 +1,19 @@
+.weathercard{
+  margin: 0px;
+  padding: 0.5rem;
+  background-color: var(--light);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+p {
+  color: var(--text);
+}
+.temp-header {
+  text-align: right;
+}
+.temp-header  p {
+  font-style: italic;
+}
+.value P {
+  font-family: 'Chivo Mono', monospace;
+}

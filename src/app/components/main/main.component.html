@@ -1,5 +1,9 @@
 
-<div *ngIf="isReady()">
-  <app-day-selector [forecastDays]="getForecastResponse().forecast.forecastday"></app-day-selector>
+<div class="main-conainter">
+  <div *ngIf="isReady()">
+    <app-day-selector [forecastDays]="getForecastResponse().forecast.forecastday"></app-day-selector>
+    <app-weathercard></app-weathercard>
+  </div>
 </div>
+
 
