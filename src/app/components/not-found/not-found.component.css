@@ -1,0 +1,15 @@
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  text-align: center;
+}
+.vertical > * {
+  display: block;
+}
