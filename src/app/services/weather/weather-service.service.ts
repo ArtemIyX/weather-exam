@@ -5,7 +5,7 @@ import { catchError, retry } from 'rxjs/operators';
 import {
   currentWeatherResponse,
   forecastWeatherResponse,
-} from '../responses/currentWeather';
+} from '../../responses/weather';
 
 @Injectable({
   providedIn: 'root',
