@@ -1,7 +1,12 @@
 <div class="day-selector-container">
-  <div class="day" *ngFor="let item of forecastDays">
-    <p>{{item.date | dayConverter}}</p>
-    <p>{{item.date | dayNumberConverter}}</p>
-    <p>{{item.date | monthConverter}}</p>
+  <div *ngFor="let item of forecastDays; let i = index;">
+    <div class="day" [ngClass]="{selected: isButtonSelected(i)}">
+      <button class="day-button" (click)="buttonSelected(i)">
+        <p>{{item.date | dayConverter}}</p>
+        <p>{{item.date | dayNumberConverter}}</p>
+        <p>{{item.date | monthConverter}}</p>
+      </button>
+    </div>
+
   </div>
 </div>

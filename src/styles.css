@@ -1,10 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --dark: #439A97;
-  --normal: #62B6B7;
-  --light: #97DECE;
-  --very-light: #CBEDD5;
+  --back: #F3EFE0;
+  --light: #434242;
+  --dark: #222222;
+  --selected: #22A39F;
+  --text: #d3d3d3
 }
 body {
-
+  background-color: var(--back);
 }

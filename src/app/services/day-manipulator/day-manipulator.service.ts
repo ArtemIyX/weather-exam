@@ -7,6 +7,7 @@ import { WeatherService } from '../weather/weather-service.service';
 })
 export class DayManipulatorService {
 
+  selectedDay: number = 0;
   forecast: forecastWeatherResponse | undefined;
   onForecastLoaded: EventEmitter<forecastWeatherResponse> = new EventEmitter<forecastWeatherResponse>();
 
@@ -21,5 +22,9 @@ export class DayManipulatorService {
       this.forecast = x;
       this.onForecastLoaded.emit(this.forecast);
     });
+  }
+
+  selectDay(index: number) {
+    this.selectedDay = index;
   }
 }

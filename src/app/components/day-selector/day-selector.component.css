@@ -2,6 +2,18 @@
   display: flex;
 }
 .day {
-  background-color:bisque;
-  /* background-color: color(green); */
+  margin: 0.2rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--dark);
+
+}
+.selected {
+  background-color: var(--light);
+}
+.day-button {
+  border: none;
+  background-color: transparent;
+  color: var(--text);
 }

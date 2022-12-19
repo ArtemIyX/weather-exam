@@ -14,4 +14,12 @@ export class DaySelectorComponent {
   constructor(private mainService: DayManipulatorService) {
 
   }
+
+  buttonSelected(index: number) {
+    this.mainService.selectDay(index);
+  }
+
+  isButtonSelected(index: number): boolean {
+    return this.mainService.selectedDay == index;
+  }
 }
