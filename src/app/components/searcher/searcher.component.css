@@ -7,9 +7,44 @@
 .search-form  {
   padding: 1rem;
 }
+.search-form > * {
+  float: left;
+}
 .search-label {
   padding-right: 0.5rem;
 }
 input.ng-invalid.ng-touched {
   border-color: red;
+}
+
+.search-form input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid var(--dark);
+  background: var(--mid);
+  color: var(--text);
+}
+
+.search-form button {
+  padding: 10px;
+  background: var(--light);
+  color: var(--text);
+  font-size: 17px;
+  border: 1px solid var(--dark);
+  border-left: none;
+  cursor: pointer;
+}
+.search-form button p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.search-form button:hover {
+  background: var(--selected);
+}
+
+.search-form::after {
+  content: "";
+  clear: both;
+  /* display: table; */
 }

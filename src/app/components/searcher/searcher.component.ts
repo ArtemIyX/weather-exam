@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, ControlContainer, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, ControlContainer, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-searcher',
@@ -17,16 +17,7 @@ export class SearcherComponent implements OnInit{
     });
   }
 
-  onlyEnglishLetters(control: FormControl) {
-    let reg = /^[a-zA-Z]*$/;
-    if(control.value != null && reg.test(control.value)) {
-      return null;
-    }
-    return {onlyEnglishLetters: true};
-  }
-
   sumbit(): void {
-
-    console.log(this.form);
+    
   }
 }
