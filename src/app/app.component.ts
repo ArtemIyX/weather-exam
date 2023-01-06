@@ -1,14 +1,12 @@
-import { Component } from '@angular/core';
-import { WeatherService } from './services/weather/weather-service.service';
-import { Observable, throwError } from 'rxjs';
-import { currentWeatherResponse } from './responses/weather';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent{
+
   title = 'weather-exam';
 
 }

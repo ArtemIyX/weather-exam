@@ -42,9 +42,16 @@ input.ng-invalid.ng-touched {
 .search-form button:hover {
   background: var(--selected);
 }
+.search-form button:active {
+  background-color: var(--light);
+}
+small {
+  color: darkred;
+  font-weight: bold;
+}
 
-.search-form::after {
+/* .search-form::after {
   content: "";
   clear: both;
-  /* display: table; */
 }
+*/

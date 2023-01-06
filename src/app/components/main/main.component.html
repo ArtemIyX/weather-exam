@@ -1,7 +1,6 @@
 <div class="main-conainter">
   <div>
     <app-searcher></app-searcher>
-    <app-error-display></app-error-display>
     <div *ngIf="isReady()">
       <app-day-selector
         [forecastDays]="getForecastResponse().forecast.forecastday"

@@ -1,13 +1,17 @@
 <div class="search-div">
   <form class="search-form" [formGroup]="form" (ngSubmit)="sumbit()">
-    <input class="search-input" type="text" formControlName="city" />
-    <div>
-      <small *ngIf="form.controls['city']?.errors?.['required']"
-        >This field is required</small
-      >
+    <div class="search-col">
+      <div class="search-row">
+        <input class="search-input" type="text" formControlName="city" />
+        <button type="submit">
+          <p>Search</p>
+        </button>
+      </div>
+      <div>
+        <small *ngIf="form.controls['city']?.errors?.['required']"
+          >This field is required</small
+        >
+      </div>
     </div>
-    <button type="submit">
-      <p>Search</p>
-    </button>
   </form>
 </div>
