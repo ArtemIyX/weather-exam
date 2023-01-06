@@ -11,5 +11,4 @@ import { currentWeatherResponse } from './responses/weather';
 export class AppComponent {
   title = 'weather-exam';
 
-  constructor(private weather: WeatherService) {}
 }

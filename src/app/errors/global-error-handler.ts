@@ -1,25 +1,19 @@
 import { HttpErrorResponse } from "@angular/common/http";
 import { ErrorHandler, Injectable } from "@angular/core";
+import { ErrorHandleService } from "../services/error-handle/error-handle.service";
 
-Injectable()
+@Injectable({providedIn: 'root'})
 export class GlobalErrorHandler implements ErrorHandler {
   constructor(
-    // private errorDialogService: ErrorDialogService,
-    // private zone: NgZone
+    private errorService: ErrorHandleService
   ) {}
 
   handleError(error: any) {
-    // Check if it's an error from an HTTP response
-    if (!(error instanceof HttpErrorResponse)) {
-      error = error.rejection; // get the error object
-    }
-    // this.zone.run(() =>
-    //   this.errorDialogService.openDialog(
-    //     error?.message || 'Undefined client error',
-    //     error?.status
-    //   )
-    // );
+    // if (!(error instanceof HttpErrorResponse)) {
+    //   error = error.rejection; // get the error object
+    // }
 
     console.error('Error from global error handler', error);
+    this.errorService.notifyError(error.toString());
   }
 }
