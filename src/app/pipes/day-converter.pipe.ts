@@ -6,17 +6,17 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class DayConverterPipe implements PipeTransform {
 
   private days: string[] = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday"
   ]
 
   transform(value: string): string {
-    return this.days[new Date(value).getDay() - 1];
+    return this.days[new Date(value).getDay()];
   }
 
 }

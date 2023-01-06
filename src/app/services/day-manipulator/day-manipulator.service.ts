@@ -17,8 +17,8 @@ export class DayManipulatorService {
     return this.forecast;
   }
 
-  loadForecast(): void {
-    this.weatherService.getForecastWeather("Riga", 3).subscribe(x => {
+  loadForecast(city: string): void {
+    this.weatherService.getForecastWeather(city, 3).subscribe(x => {
       this.forecast = x;
       this.onForecastLoaded.emit(this.forecast);
     });

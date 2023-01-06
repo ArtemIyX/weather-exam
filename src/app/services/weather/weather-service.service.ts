@@ -28,7 +28,7 @@ export class WeatherService {
   }
 
   getForecastWeather(city: string, amount: number) : Observable<forecastWeatherResponse> {
-    return this.http.get<forecastWeatherResponse>("http://localhost:4200/assets/json/forecast.json");
+    //return this.http.get<forecastWeatherResponse>("http://localhost:4200/assets/json/forecast.json");
     let query = {
       key: this.apiKey,
       q: city,
