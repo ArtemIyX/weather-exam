@@ -1,14 +1,13 @@
 .weathercard{
-  /* margin: 0px; */
-  /* padding: 0.5rem; */
   background-color: var(--light);
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 p {
   color: var(--text);
 }
-.temp-header {
+/*.temp-header {
   padding-right: 0.6em;
   padding-left: 2em;
   text-align: right;
@@ -78,4 +77,22 @@ tbody > tr:nth-of-type(even) {
 .location > p {
   font-weight: 800;
   font-size: 2em;
+  padding: 0px;
+  margin: 0px;
+} */
+
+.table-wide {
+  display: block;
+}
+.table-vert {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .table-wide {
+    display: none;
+  }
+  .table-vert {
+    display: block;
+  }
 }

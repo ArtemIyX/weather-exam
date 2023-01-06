@@ -11,6 +11,8 @@ import { DaySelectorComponent } from './components/day-selector/day-selector.com
 import { DayConverterPipe } from './pipes/day-converter.pipe';
 import { DayNumberConverterPipe } from './pipes/day-number-converter.pipe';
 import { MonthConverterPipe } from './pipes/month-converter.pipe';
+import { SearcherComponent } from './components/searcher/searcher.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -27,12 +29,14 @@ const routes: Routes = [
     DayConverterPipe,
     DayNumberConverterPipe,
     MonthConverterPipe,
+    SearcherComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
     NgbModule,
+    ReactiveFormsModule
   ],
   exports: [RouterModule],
   providers: [],

@@ -1,10 +1,14 @@
 <div class="main-conainter">
-  <div *ngIf="isReady()">
-    <app-day-selector
-      [forecastDays]="getForecastResponse().forecast.forecastday"
-    ></app-day-selector>
-    <app-weathercard
-    [forecastDay]="getSelectedForecastDay()"
-    [location]="getForecastResponse().location"></app-weathercard>
+  <div>
+    <app-searcher></app-searcher>
+    <div *ngIf="isReady()">
+      <app-day-selector
+        [forecastDays]="getForecastResponse().forecast.forecastday"
+      ></app-day-selector>
+      <app-weathercard
+        [forecastDay]="getSelectedForecastDay()"
+        [location]="getForecastResponse().location"
+      ></app-weathercard>
+    </div>
   </div>
 </div>

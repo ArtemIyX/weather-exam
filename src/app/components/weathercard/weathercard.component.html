@@ -7,7 +7,68 @@
     </div>
   </div>
 
-  <table>
+  <div class="table-vert">
+    <div *ngFor="let data of mobileWeatherData">
+      <table>
+        <thead>
+          <th scope="col">Time</th>
+          <th scope="col" *ngFor="let item of data.pair">{{ item.time }}</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="temp-header">Weather</th>
+            <td *ngFor="let item of data.pair">
+              <div>
+                <img src="{{ item.condition.icon }}" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="temp-header">Temperature, °C</th>
+            <td *ngFor="let item of data.pair">{{ item.temp_c }}°</td>
+          </tr>
+          <tr>
+            <th scope="row" class="temp-header">Humidity</th>
+            <td *ngFor="let item of data.pair">
+              {{ item.humidity }}
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="temp-header">Pressure, mb</th>
+            <td *ngFor="let item of data.pair">
+              {{ item.pressure_mb }}
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="temp-header">Wind, kph</th>
+            <td *ngFor="let item of data.pair">
+              {{ item.wind_mph }}
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="temp-header">Wind direction</th>
+            <td *ngFor="let item of data.pair">
+              {{ item.wind_dir }}
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="temp-header">Chance of rain, %</th>
+            <td *ngFor="let item of data.pair">
+              {{ item.chance_of_rain }}
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="temp-header">Chance of snow, %</th>
+            <td *ngFor="let item of data.pair">
+              {{ item.chance_of_snow }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <table class="table-wide">
     <thead>
       <tr>
         <th scope="col">Time</th>
@@ -23,7 +84,6 @@
         >
           <div>
             <img src="{{ item.condition.icon }}" />
-            <p>{{ item.condition.text }}</p>
           </div>
         </td>
       </tr>
@@ -93,7 +153,6 @@
     </tbody>
   </table>
   <div class="location">
-    <p>{{location?.region}}</p>
+    <p>{{ location?.region }}</p>
   </div>
-
 </div>

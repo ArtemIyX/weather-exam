@@ -1,0 +1,14 @@
+<div class="search-div">
+  <form class="search-form" [formGroup]="form" (ngSubmit)="sumbit()">
+    <label class="search-label">{{ "City: " | uppercase }} </label>
+    <div class="col">
+      <input class="search-input" type="text" formControlName="city"/>
+      <div>
+        <small *ngIf="true">Only english letters</small>
+        <small *ngIf="true">Required</small>
+      </div>
+    </div>
+
+    <input class="search-sumbit" type="submit">
+  </form>
+</div>
