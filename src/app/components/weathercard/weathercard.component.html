@@ -71,7 +71,7 @@
   <table class="table-wide">
     <thead>
       <tr>
-        <th scope="col">Time</th>
+        <th scope="col" class="timeHeader">Time</th>
         <th scope="col" *ngFor="let item of weatherData">{{ item.time }}</th>
       </tr>
     </thead>
@@ -89,7 +89,7 @@
       </tr>
       <tr>
         <th scope="row" class="temp-header">Temperature, °C</th>
-        <td
+        <td class="value"
           *ngFor="let item of weatherData; let id = index"
           [ngClass]="{ delim: isDelim(item) }"
         >
@@ -98,7 +98,7 @@
       </tr>
       <tr>
         <th scope="row" class="temp-header">Humidity</th>
-        <td
+        <td class="value"
           *ngFor="let item of weatherData; let id = index"
           [ngClass]="{ delim: isDelim(item) }"
         >
@@ -107,7 +107,7 @@
       </tr>
       <tr>
         <th scope="row" class="temp-header">Pressure, mb</th>
-        <td
+        <td class="value"
           *ngFor="let item of weatherData; let id = index"
           [ngClass]="{ delim: isDelim(item) }"
         >
@@ -116,7 +116,7 @@
       </tr>
       <tr>
         <th scope="row" class="temp-header">Wind, kph</th>
-        <td
+        <td class="value"
           *ngFor="let item of weatherData; let id = index"
           [ngClass]="{ delim: isDelim(item) }"
         >
@@ -125,7 +125,7 @@
       </tr>
       <tr>
         <th scope="row" class="temp-header">Wind direction</th>
-        <td
+        <td class="value"
           *ngFor="let item of weatherData; let id = index"
           [ngClass]="{ delim: isDelim(item) }"
         >
@@ -134,7 +134,7 @@
       </tr>
       <tr>
         <th scope="row" class="temp-header">Chance of rain, %</th>
-        <td
+        <td class="value"
           *ngFor="let item of weatherData; let id = index"
           [ngClass]="{ delim: isDelim(item) }"
         >
@@ -143,7 +143,7 @@
       </tr>
       <tr>
         <th scope="row" class="temp-header">Chance of snow, %</th>
-        <td
+        <td class="value"
           *ngFor="let item of weatherData; let id = index"
           [ngClass]="{ delim: isDelim(item) }"
         >

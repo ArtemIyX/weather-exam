@@ -2,12 +2,14 @@
   background-color: var(--light);
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  border-top-right-radius: 1rem;
 }
 p {
   color: var(--text);
 }
-/*.temp-header {
+table {
+  color: var(--text);
+}
+.temp-header {
   padding-right: 0.6em;
   padding-left: 2em;
   text-align: right;
@@ -15,12 +17,14 @@ p {
 .temp-header  p {
   font-style: italic;
 }
-.value P {
+.value {
   font-family: 'Chivo Mono', monospace;
 }
-table {
-  color: var(--text);
+.timeHeader {
+  text-align: right;
+  padding-right: 0.6em;
 }
+
 thead {
   border-bottom: 1px solid var(--selected);
 }
@@ -31,11 +35,11 @@ tbody {
 td{
   padding: 5px;
 }
+
 tbody > tr > th,
 thead > tr > th {
   background-color: var(--dark);
 }
-
 thead > tr > th {
   padding: 0.2em;
   text-align: center;
@@ -92,7 +96,15 @@ tbody > tr:nth-of-type(even) {
   .table-wide {
     display: none;
   }
+  .table-vert table {
+    margin-left: auto;
+    margin-right: auto;
+  }
   .table-vert {
     display: block;
+
+  }
+  th {
+    text-align: center;
   }
 }
