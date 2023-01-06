@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,6 +13,7 @@ import { DayNumberConverterPipe } from './pipes/day-number-converter.pipe';
 import { MonthConverterPipe } from './pipes/month-converter.pipe';
 import { SearcherComponent } from './components/searcher/searcher.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GlobalErrorHandler } from './errors/global-error-handler';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -39,7 +40,10 @@ const routes: Routes = [
     ReactiveFormsModule
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [{
+      provide: ErrorHandler,
+      useClass: GlobalErrorHandler,
+  }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
