@@ -1,5 +1,5 @@
-# WeatherExam
-![alt text](https://cdn.discordapp.com/attachments/1026083841791754250/1062711252050251846/image.png)
+# Weather forecast app (Web technologies exam)
+![Screenshot](https://cdn.discordapp.com/attachments/1026083841791754250/1062711252050251846/image.png)
 
 ## Wc3 HTML Validator
 Throws 'CSS Parse error'. It's due to :root Angular selector
